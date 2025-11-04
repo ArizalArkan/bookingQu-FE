@@ -17,6 +17,22 @@ Aplikasi booking tiket bioskop yang dibangun dengan Astro, React, TypeScript, da
 - **QR Code**: Generate QR code sama seperti online booking
 - **Print Ticket**: Akses ke halaman ticket untuk print
 
+## Gallery Photo
+<img width="1068" height="661" alt="Screenshot 2025-11-04 at 21 29 31" src="https://github.com/user-attachments/assets/66f6e821-787b-4d0e-bcff-d84fd524e72d" />
+
+<img width="1019" height="642" alt="Screenshot 2025-11-04 at 21 30 11" src="https://github.com/user-attachments/assets/fea2f670-96f4-4d94-b53f-d7b6352268dd" />
+
+<img width="965" height="654" alt="Screenshot 2025-11-04 at 21 30 25" src="https://github.com/user-attachments/assets/3f8df87a-acdd-4f3d-b3de-3936b472c2fb" />
+
+<img width="1040" height="662" alt="Screenshot 2025-11-04 at 21 30 47" src="https://github.com/user-attachments/assets/0fd3f60f-e05c-4f65-9364-38735e0269e7" />
+
+<img width="1108" height="651" alt="Screenshot 2025-11-04 at 21 31 18" src="https://github.com/user-attachments/assets/1848f12f-5222-4e10-b6cc-054209c85bcb" />
+
+<img width="981" height="557" alt="Screenshot 2025-11-04 at 21 31 33" src="https://github.com/user-attachments/assets/a7c49e46-af0a-47ad-b3f8-afa09bc5212e" />
+
+<img width="1000" height="615" alt="Screenshot 2025-11-04 at 21 31 59" src="https://github.com/user-attachments/assets/50c05534-b8e0-4c9d-8b00-61f05a0b9158" />
+
+
 ## 🚀 Tech Stack
 
 - **Frontend Framework**: [Astro](https://astro.build/) v5.15.3
