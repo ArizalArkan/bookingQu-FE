@@ -23,11 +23,11 @@ export const CashierBookingForm: React.FC = () => {
   }, []);
 
   useEffect(() => {
+    setSelectedSeats([]);
     if (selectedStudioId) {
       loadStudio(selectedStudioId);
     } else {
       setSelectedStudio(null);
-      setSelectedSeats([]);
     }
   }, [selectedStudioId]);
 
@@ -244,6 +244,7 @@ export const CashierBookingForm: React.FC = () => {
           <div className="lg:col-span-2">
             {selectedStudio ? (
               <SeatMap
+                key={selectedStudio.id}
                 studio={selectedStudio}
                 selectedSeats={selectedSeats}
                 onSeatSelect={setSelectedSeats}
