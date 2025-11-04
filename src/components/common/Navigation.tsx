@@ -38,6 +38,9 @@ export const Navigation: React.FC = () => {
               </div>
             ) : isAuthenticated ? (
               <>
+                <a href="/" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                  Home
+                </a>
                 <a href="/validate-ticket" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                   Validate Ticket
                 </a>
@@ -131,6 +134,9 @@ export const Navigation: React.FC = () => {
                     <div className="text-xs text-gray-400">{user?.email}</div>
                   </div>
                 </div>
+                <a href="/" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                  Home
+                </a>
                 <a
                   href="/validate-ticket"
                   className="block text-gray-300 hover:text-white hover:bg-cinema-gray-light px-3 py-2 rounded-md text-sm font-medium transition-colors"
