@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { PageWrapper } from '../components/common/PageWrapper';
+import { MyTickets as MyTicketsComponent } from '../components/tickets/MyTickets';
+---
+
+<Layout title="Tiket Saya - Cinema Booking">
+	<PageWrapper client:load>
+		<div class="py-12 px-4 sm:px-6 lg:px-8">
+			<MyTicketsComponent client:load />
+		</div>
+	</PageWrapper>
+</Layout>
+

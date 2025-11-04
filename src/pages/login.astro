@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { PageWrapper } from '../components/common/PageWrapper';
+import { LoginForm } from '../components/auth/LoginForm';
+---
+
+<Layout title="Login - Cinema Booking">
+	<PageWrapper client:load>
+		<div class="min-h-[calc(100vh-4rem)] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+			<LoginForm client:load />
+		</div>
+	</PageWrapper>
+</Layout>
+

@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { PageWrapper } from '../components/common/PageWrapper';
+import { BookingSuccess as BookingSuccessComponent } from '../components/booking/BookingSuccess';
+
+const bookingId = Astro.url.searchParams.get('id');
+---
+
+<Layout title="Booking Berhasil - Cinema Booking">
+	<PageWrapper client:load>
+		<div class="py-12 px-4 sm:px-6 lg:px-8">
+			{bookingId ? (
+				<BookingSuccessComponent client:load bookingId={bookingId} />
+			) : (
+				<div class="max-w-4xl mx-auto">
+					<div class="bg-red-500 bg-opacity-10 border border-red-500 text-red-500 px-4 py-3 rounded">
+						Booking ID tidak ditemukan
+					</div>
+				</div>
+			)}
+		</div>
+	</PageWrapper>
+</Layout>
+

@@ -1,46 +1,98 @@
-# Astro Starter Kit: Basics
+# BookingQu
 
-```sh
-npm create astro@latest -- --template basics
+Aplikasi booking tiket bioskop yang dibangun dengan Astro, React, TypeScript, dan TailwindCSS.
+
+## 🎬 Fitur Utama
+
+### Online Booking
+- **Registrasi & Login**: Sistem autentikasi dengan email/password atau Google SSO (simulasi)
+- **Pilih Studio**: 5 studio dengan kapasitas 20 kursi masing-masing
+- **Pilih Kursi**: Interface interaktif untuk memilih kursi (bisa lebih dari 1)
+- **QR Code**: Generate QR code untuk validasi masuk studio
+- **My Tickets**: Lihat semua booking dengan QR code
+
+### Offline Booking (Kasir)
+- **Input Data Pelanggan**: Form untuk data pelanggan
+- **Booking Langsung**: Booking tanpa perlu login
+- **QR Code**: Generate QR code sama seperti online booking
+- **Print Ticket**: Akses ke halaman ticket untuk print
+
+## 🚀 Tech Stack
+
+- **Frontend Framework**: [Astro](https://astro.build/) v5.15.3
+- **UI Library**: React 18
+- **Language**: TypeScript
+- **Styling**: TailwindCSS
+- **State Management**: React Context API
+- **Data Persistence**: LocalStorage
+
+## 📦 Instalasi
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 📱 Halaman Utama
 
-## 🚀 Project Structure
+1. **Home** (`/`) - Daftar studio dengan availability
+2. **Login** (`/login`) - Halaman login
+3. **Register** (`/register`) - Halaman registrasi
+4. **Booking** (`/booking/[studioId]`) - Pilih kursi
+5. **Booking Success** (`/booking-success`) - Konfirmasi & QR code
+6. **My Tickets** (`/my-tickets`) - Daftar booking user
+7. **Cashier** (`/cashier`) - Interface kasir untuk offline booking
 
-Inside of your Astro project, you'll see the following folders and files:
+## 💾 LocalStorage Keys
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+- `cinema_users` - Daftar user
+- `cinema_studios` - Data studio
+- `cinema_bookings` - Daftar booking
+- `cinema_current_user` - User yang sedang login
+
+## 🔐 Autentikasi
+
+### Mock Google SSO
+Simulasi login dengan Google menggunakan data:
+```javascript
+{
+  email: 'demo@gmail.com',
+  name: 'Demo User (Google)'
+}
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+### Session Management
+- Session disimpan di localStorage
+- Auto-redirect ke login jika belum authenticated
+- Logout menghapus session
 
-## 🧞 Commands
+## 🎯 Cara Penggunaan
 
-All commands are run from the root of the project, from a terminal:
+### Online Booking:
+1. Register atau login
+2. Pilih studio dari home page
+3. Pilih kursi yang diinginkan (bisa lebih dari 1)
+4. Konfirmasi booking
+5. Dapatkan QR code
+6. Tunjukkan QR code saat masuk studio
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### Offline Booking (Kasir):
+1. Buka halaman `/cashier`
+2. Input data pelanggan
+3. Pilih studio
+4. Pilih kursi
+5. Konfirmasi booking
+6. Print atau tampilkan QR code
 
-## 👀 Want to learn more?
+## 📄 License
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+This project is created for Peruri Digital Frontend Engineer Coding Challenge

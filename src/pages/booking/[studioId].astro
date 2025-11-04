@@ -1,0 +1,19 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { PageWrapper } from '../../components/common/PageWrapper';
+import { BookingFlow } from '../../components/booking/BookingFlow';
+
+const { studioId } = Astro.params;
+
+if (!studioId) {
+  return Astro.redirect('/');
+}
+---
+
+<Layout title="Booking Kursi - Cinema Booking">
+	<PageWrapper client:load>
+		<div class="py-12 px-4 sm:px-6 lg:px-8">
+			<BookingFlow client:load studioId={studioId} />
+		</div>
+	</PageWrapper>
+</Layout>

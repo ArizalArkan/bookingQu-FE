@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { PageWrapper } from '../components/common/PageWrapper';
+import { ValidateTicketForm } from '../components/validation/ValidateTicketForm';
+---
+
+<Layout title="Validasi Tiket - Cinema Booking">
+	<PageWrapper client:load>
+		<div class="min-h-[calc(100vh-4rem)] flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+			<ValidateTicketForm client:load />
+		</div>
+	</PageWrapper>
+</Layout>
+
